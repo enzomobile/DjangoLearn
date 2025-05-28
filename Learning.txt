@@ -1,0 +1,15 @@
+** Main files functions**:
+
+wsgi.py: Web Server Gateway Interface, you don't change it.
+asgi.py: You don't change it.
+
+settings.py: Config of your project, sometimes you change it.
+urls.py: You define the paths of your project in this file, when someone requests, it falls inside the urls pattern.
+__init__.py: Got no idea over it for now.
+
+manage.py: NEVER alter it, used to run commands.
+
+------------------------------------------------------------------------------------
+
+I made studybud dir, then set up the virtualenv, by the name 'myenv'. The django files are 'studybud' and app is 'base'.
+I stopped at Templates part of the video.
