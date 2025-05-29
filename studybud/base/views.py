@@ -1,8 +1,20 @@
 from django.shortcuts import render
-from django.http import HttpResponse # HttpResponse for routing simple responses.
+
+rooms = [
+    {'id': 1, 'name': 'Lets learn Python!'},
+    {'id': 2, 'name': 'Design with me!'},
+    {'id': 3, 'name': 'Back-End dev!'},
+]
 
 def home(request):
-    return HttpResponse("Home page") # This is a simple view function that returns a response for the home page.
+    context = {'rooms': rooms}
+    return render(request, 'base/home.html', context)  # Render the home page using a template.
 
-def room(request):
-    return HttpResponse("Room page") # This is a simple view function that returns a response for the room page.
+def room(request, pk):
+    room = None
+    for i in rooms:
+        if i['id'] == int(pk):
+            room = i
+    context = {'room': room}
+
+    return render(request, 'base/room.html', context)  # Render the room page using a template.

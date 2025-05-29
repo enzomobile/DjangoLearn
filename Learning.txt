@@ -13,3 +13,5 @@ manage.py: NEVER alter it, used to run commands.
 
 I made studybud dir, then set up the virtualenv, by the name 'myenv'. The django files are 'studybud' and app is 'base'.
 I stopped at Templates part of the video.
+
+Superuser: Enzo, prenzo, oloko123

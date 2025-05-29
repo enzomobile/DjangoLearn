@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudyBud Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    {% block content %}
+    <header>
+        <h1>Welcome to StudyBud</h1>
+    </header>
+    <main>
+        <p>This is the home page of your Django project.</p>
+        <div>
+            {% for room in rooms %}
+                <div>
+                    <h5>{{room.id}} -- <a href='{% url "room" room.id %}'>{{room.name}}</a></h5>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+    {% endblock %}
+</body>
+</html>
